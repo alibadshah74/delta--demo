@@ -1,34 +1,45 @@
-#include<stdio.h>
+//Question: WRITE A C PROGRAM TO FIND WHETHER A GIVEN INPUT NUMBER IS ODD OR EVEN
+
+//by use function
+
+#include <stdio.h>
+int checkOddEven(int n);
 
 int main(){
-    int a, b, choice;
-    printf("enter a value of a and b :");
-    scanf("%d %d",&a,&b);
+     int n;
+     printf("enter intiger number :");
+     scanf("%d",&n);
+     int result=checkOddEven(n);
+     if(result==0){
+        printf("number is even %d \n",n);
+     }else{
+        printf("number is odd %d",n);
+     }
+}
 
-    printf("enter your choice what you want \n1. Addition, \n2. Subtraction, \n3. multiplication \n4. division\n");
-    scanf("%d", &choice);
-
-    switch (choice)
-    {
-    case 1:
-        printf("sum %d",a+b);
-        break;
-    case 2:
-        printf("sub %d",a-b);
-        break;
-     case 3:
-        printf("mul %d",a*b);
-        break;
-    case 4:
-        if (b==0){
-            printf("Division by zero error");
-        }else{
-            printf("div %d",a/b);
-        }
-        break;
-
-    default: printf("invalid choice ");
-        break;
+int checkOddEven(int n){
+    if(n%2==0){
+        return 0; //even
+    }else{
+        return 1; //odd
     }
-    return 0;
+};
+
+//by use without function.
+
+#include<stdio.h>
+int main(){
+int number;
+printf("Enter integer number :");
+scanf("%d",&number);
+
+    if((number%2)==0){
+        printf("number is even.");
+    }
+    else{
+        printf("number is odd.");
+    };
+    
+
+return 0;
 }

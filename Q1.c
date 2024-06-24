@@ -1,45 +1,15 @@
-//Question: WRITE A C PROGRAM TO FIND WHETHER A GIVEN INPUT NUMBER IS ODD OR EVEN
+#include<stdio.h>
 
-//by use function
-
-#include <stdio.h>
-int checkOddEven(int n);
+float convertTemp(float celsius);
 
 int main(){
-     int n;
-     printf("enter intiger number :");
-     scanf("%d",&n);
-     int result=checkOddEven(n);
-     if(result==0){
-        printf("number is even %d \n",n);
-     }else{
-        printf("number is odd %d",n);
-     }
+   
+   float far=convertTemp(4);
+   printf("far %f", far);
+   return 0;
 }
 
-int checkOddEven(int n){
-    if(n%2==0){
-        return 0; //even
-    }else{
-        return 1; //odd
-    }
-};
-
-//by use without function.
-
-#include<stdio.h>
-int main(){
-int number;
-printf("Enter integer number :");
-scanf("%d",&number);
-
-    if((number%2)==0){
-        printf("number is even.");
-    }
-    else{
-        printf("number is odd.");
-    };
-    
-
-return 0;
+float convertTemp(float celsius){
+   float far= celsius*(9.0/5.0)+32;
+   return far;
 }
